@@ -10,7 +10,6 @@ import com.data.visualization.service.Dataservice;
 
 @RestController
 public class Datacontroller {
-
 	@Autowired
 	Dataservice dataservice;
 
@@ -19,5 +18,10 @@ public class Datacontroller {
 		dataservice.saveDetails(datapojo);
 
 	}
-
+	
+	@GetMapping("/welcome")
+        public String welcome()
+	{
+		return "welcome to springboot";
+	}
 }
